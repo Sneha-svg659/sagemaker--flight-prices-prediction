@@ -234,9 +234,12 @@ preprocessor=Pipeline(steps=[
 ])
 sklearn.set_config(transform_output="pandas")
 # read the training data
-path = "data/train.csv"
-train=pd.read_csv(path)
+import os
 
+BASE_DIR = os.path.dirname(__file__)
+path = os.path.join(BASE_DIR, "data", "train.csv")
+
+train = pd.read_csv(path)
 X_train=train.drop(columns="price")
 y_train=train.price.copy()
 
