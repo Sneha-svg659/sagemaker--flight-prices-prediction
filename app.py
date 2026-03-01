@@ -234,7 +234,7 @@ preprocessor=Pipeline(steps=[
 ])
 sklearn.set_config(transform_output="pandas")
 # read the training data
-path=r"C:\Users\sneha\OneDrive\Desktop\flight-sagemake-project\data\train.csv"
+path = "data/train.csv"
 train=pd.read_csv(path)
 
 X_train=train.drop(columns="price")
